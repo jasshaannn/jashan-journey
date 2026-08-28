@@ -1,4 +1,20 @@
 import { ArrowDown } from 'lucide-react'
+import { GithubIcon, InstagramIcon } from '@/components/brand-icons'
+
+const handles = [
+  {
+    label: '@jasshaannn',
+    href: 'https://github.com/jasshaannn',
+    Icon: GithubIcon,
+    className: 'hover:border-neon-cyan/60 hover:text-neon-cyan',
+  },
+  {
+    label: '@jasshaannn',
+    href: 'https://instagram.com/jasshaannn',
+    Icon: InstagramIcon,
+    className: 'hover:border-neon-pink/60 hover:text-neon-pink',
+  },
+] as const
 
 export function HeroSection() {
   return (
@@ -23,7 +39,22 @@ export function HeroSection() {
           shipping projects, and learning out loud.
         </p>
 
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+          {handles.map(({ label, href, Icon, className }) => (
+            <a
+              key={href}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`flex items-center gap-2 rounded-full border border-border bg-background/40 px-4 py-1.5 font-mono text-xs text-muted-foreground transition-colors ${className}`}
+            >
+              <Icon className="h-4 w-4" />
+              {label}
+            </a>
+          ))}
+        </div>
+
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <a
             href="#projects"
             className="rounded-full bg-neon-cyan px-7 py-3 font-medium text-primary-foreground shadow-glow-cyan transition-transform hover:scale-105"

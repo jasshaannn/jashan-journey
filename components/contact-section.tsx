@@ -3,15 +3,15 @@ import { GithubIcon, InstagramIcon, LinkedinIcon } from '@/components/brand-icon
 const socials = [
   {
     label: 'GitHub',
-    handle: '@jashan',
-    href: '#', // TODO: replace with your GitHub URL
+    handle: '@jasshaannn',
+    href: 'https://github.com/jasshaannn',
     Icon: GithubIcon,
     accent: 'cyan',
   },
   {
     label: 'Instagram',
-    handle: '@jashan',
-    href: '#', // TODO: replace with your Instagram URL
+    handle: '@jasshaannn',
+    href: 'https://instagram.com/jasshaannn',
     Icon: InstagramIcon,
     accent: 'pink',
   },
